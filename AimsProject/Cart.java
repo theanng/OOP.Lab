@@ -16,9 +16,17 @@ public class Cart {
 			System.out.println("The cart is almost full");
 			
 		}
-		
-	}
-	public void removeDigitalVideoDisc(DigitalVideoDisc disc) {
+    }
+    public void addDigitalVideoDisc(DigitalVideoDisc[] dvdList) {
+        for (int i = 0; i<dvdList.length; i++) {
+            this.addDigitalVideoDisc(dvdList[i]);
+        }
+    }
+	
+    //method for an abitraty number of arguments
+    
+	
+    public void removeDigitalVideoDisc(DigitalVideoDisc disc) {
         boolean found = false;
         for (int i = 0; i < qtyOrdered; i++) {
             if (itemsOrdered[i] == disc) {
