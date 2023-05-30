@@ -1,7 +1,10 @@
+package src.hust.soict.dsai.aims.store;
 import java.util.ArrayList;
 
+import src.hust.soict.dsai.aims.disc.DigitalVideoDisc;
+
 public class Store {
-    protected ArrayList<DigitalVideoDisc> itemsInStore = new ArrayList<DigitalVideoDisc>();
+    public ArrayList<DigitalVideoDisc> itemsInStore = new ArrayList<DigitalVideoDisc>();
     public Store() {}
     public void addDVD(DigitalVideoDisc dvd) {
         boolean a = false;

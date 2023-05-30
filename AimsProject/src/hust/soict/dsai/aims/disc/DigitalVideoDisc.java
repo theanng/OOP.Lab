@@ -1,3 +1,4 @@
+package src.hust.soict.dsai.aims.disc;
 public class DigitalVideoDisc {
     
     private String title;
@@ -6,7 +7,7 @@ public class DigitalVideoDisc {
     private int length;
     private float cost;
 	private static int nbDigitalVideoDiscs = 0;
-	protected int id;
+	public int id;
 
     public String getTitle() {
         return title;

@@ -1,3 +1,8 @@
+package src.hust.soict.dsai.aims;
+
+import src.hust.soict.dsai.aims.cart.Cart;
+import src.hust.soict.dsai.aims.disc.DigitalVideoDisc;
+
 public class Aims {
     public static void main (String[] args) {
         Cart anOrder=new Cart();
