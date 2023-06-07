@@ -1,6 +1,6 @@
 package src.hust.soict.dsai.aims.cart;
 
-import src.hust.soict.dsai.aims.disc.DigitalVideoDisc;
+import src.hust.soict.dsai.aims.media.DigitalVideoDisc;
 
 public class Cart {
     public static final int MAX_NUMBERS_ORDERED=20;
@@ -82,7 +82,7 @@ public class Cart {
     public void searchDVD(int id) {
         boolean a = true;
         for (int i = 0; i<qtyOrdered; i++) {
-            if (itemsOrdered[i].id == id) {
+            if (itemsOrdered[i].getId() == id) {
                 System.out.println(itemsOrdered[i].toString());
                 a = true;
                 break;

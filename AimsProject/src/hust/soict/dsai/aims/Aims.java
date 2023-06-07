@@ -1,7 +1,7 @@
 package src.hust.soict.dsai.aims;
 
 import src.hust.soict.dsai.aims.cart.Cart;
-import src.hust.soict.dsai.aims.disc.DigitalVideoDisc;
+import src.hust.soict.dsai.aims.media.DigitalVideoDisc;
 
 public class Aims {
     public static void main (String[] args) {
