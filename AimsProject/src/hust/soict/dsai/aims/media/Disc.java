@@ -22,17 +22,20 @@ public class Disc extends Media{
 		super();
 	}
 		
-	public Disc(String title) {
+	public Disc(int id, String title) {
 		super();
 	}
-	public Disc(String title, String category, float cost) {
+	public Disc(int id, String title, String category) {
 		super();
 	}
-	public Disc(String title, String category, String director, float cost) {
+	public Disc(int id, String title, String category, float cost) {
+		super();
+	}
+	public Disc(int id, String title, String category, String director, float cost) {
 		super();
         this.director = director;
 	}
-	public Disc(String title, String category, String director, int length, float cost) {
+	public Disc(int id, String title, String category, String director, int length, float cost) {
 		super();
         this.director = director;
         this.length = length;

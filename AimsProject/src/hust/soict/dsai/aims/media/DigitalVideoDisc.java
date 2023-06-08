@@ -1,5 +1,5 @@
 package src.hust.soict.dsai.aims.media;
-public class DigitalVideoDisc extends Disc{
+public class DigitalVideoDisc extends Disc implements Playable{
 	private static int nbDigitalVideoDiscs = 0;
 
 	public DigitalVideoDisc() {
@@ -12,21 +12,34 @@ public class DigitalVideoDisc extends Disc{
 		super();
 		nbDigitalVideoDiscs++;
 		this.setId(nbDigitalVideoDiscs);
+		this.setTitle(title);
 	}
 	public DigitalVideoDisc(String title, String category, float cost) {
 		super();
 		nbDigitalVideoDiscs++;
 		this.setId(nbDigitalVideoDiscs);
+		this.setTitle(title);
+		this.setCategory(category);
+		this.setCost(cost);
 	}
 	public DigitalVideoDisc(String title, String category, String director, float cost) {
 		super();
 		nbDigitalVideoDiscs++;
 		this.setId(nbDigitalVideoDiscs);
+		this.setTitle(title);
+		this.setCategory(category);
+		this.setCost(cost);
+		this.setDirector(director);
 	}
 	public DigitalVideoDisc(String title, String category, String director, int length, float cost) {
 		super();
 		nbDigitalVideoDiscs++;
 		this.setId(nbDigitalVideoDiscs);
+		this.setTitle(title);
+		this.setCategory(category);
+		this.setCost(cost);
+		this.setDirector(director);
+		this.setLength(length);
 	}
 
 	public String toString() {
@@ -46,4 +59,8 @@ public class DigitalVideoDisc extends Disc{
 			return false;
 		}
 	}
+	@Override
+    public void play() {
+        
+    }
 }
