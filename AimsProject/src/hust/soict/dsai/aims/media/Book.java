@@ -27,4 +27,12 @@ public class Book extends Media{
             System.out.println("This author doesn't exist in the list of authors");
         }
     }
+
+    public String toString() {
+		return "Book" + " - " + this.getId()
+        + " - " + this.getTitle()
+		+ " - " + this.getCategory()
+		+ " - " + this.authors
+		+ ": " + this.getCost() + " $";
+	}
 }

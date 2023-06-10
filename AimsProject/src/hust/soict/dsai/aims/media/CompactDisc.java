@@ -10,6 +10,17 @@ public class CompactDisc extends Media implements Playable{
         return artist;
     }
 
+    public CompactDisc(int id, String title, String category, float cost, String artist) {
+        super(id, title,category, cost);
+        this.artist = artist;
+    }
+
+    public CompactDisc(int id, String title, String category, float cost, String artist, ArrayList<Track> tracks) {
+        super(id, title,category, cost);
+        this.artist = artist;
+        this.tracks = tracks;
+    }
+    
     public void addTrack(Track track) {
         if (tracks.contains(track)) {
             System.out.println("This track has already been in the list.");
@@ -41,4 +52,13 @@ public class CompactDisc extends Media implements Playable{
             System.out.println((i+1) + ". " + tracks.get(i).toString());
         }
     }
+
+    public String toString() {
+        return "CD info: " + this.getId()
+        + " - " + this.getTitle()
+		+ " - " + this.getCategory()
+		+ " - " + this.getArtist()
+		+ " - " + this.tracks
+		+ ": " + this.getCost() + " $";
+	}
 }

@@ -43,7 +43,8 @@ public class DigitalVideoDisc extends Disc implements Playable{
 	}
 
 	public String toString() {
-		return "DVD" + " - " + this.getTitle()
+		return "DVD" + " - " +this.getId()
+		+ " - " + this.getTitle()
 		+ " - " + this.getCategory()
 		+ " - " + this.getDirector()
 		+ " - " + this.getLength()
