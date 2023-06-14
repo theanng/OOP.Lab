@@ -88,7 +88,7 @@ public class Aims {
 				seeMediaDetail();
 				break;
 			case 2:
-				addMedia2Cart();
+				addMediatoCart();
 				break;
 			case 3:
 				playMedia();
@@ -156,7 +156,7 @@ public class Aims {
 		}
 
 		//Option 1.2
-		private static void addMedia2Cart(){
+		private static void addMediatoCart(){
 			for (Media media: store.getItemsInStore()){
 				System.out.println(media);
 			}
@@ -222,7 +222,7 @@ public class Aims {
 
 		switch (option){
 			case 1:
-				addMedia2Store();
+				addMediatoStore();
 				break;
 			case 2:
 				
@@ -234,7 +234,7 @@ public class Aims {
 		}
 		showMenu();
 	}
-	public static void addMedia2Store(){
+	public static void addMediatoStore(){
 		System.out.println("Options: ");
 		System.out.println("--------------------------------");
 		System.out.println("1. Book");
