@@ -18,7 +18,7 @@ public class CartTest {
     	System.out.println(anOrder.totalCost());
 
         anOrder.printCart();
-        anOrder.searchMedia("The Lion King");
-        anOrder.searchMedia("Star Wars");
+        anOrder.searchByTitle("The Lion King");
+        anOrder.searchByTitle("Star Wars");
     }
 }

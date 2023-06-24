@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <VBox prefHeight="105.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="77.0" prefWidth="599.0" style="-fx-background-color: aqua;" text="ADD DVD TO STORE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="Option">
+                     <items>
+                        <Menu mnemonicParsing="false" text="Update Store">
+                          <items>
+                            <MenuItem fx:id="viewBook" mnemonicParsing="false" onAction="#viewBookPressed" text="Add Book" />
+                              <MenuItem fx:id="viewCD" mnemonicParsing="false" onAction="#viewCDPressed" text="Add CD" />
+                              <MenuItem mnemonicParsing="false" text="Add DVD" />
+                          </items>
+                        </Menu>
+                        <MenuItem fx:id="optionViewStore" mnemonicParsing="false" onAction="#viewStorePressed" text="View Store" />
+                        <MenuItem fx:id="viewCart" mnemonicParsing="false" onAction="#viewCartPressed" text="View Cart" />
+                     </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="36.0" prefWidth="600.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="43.0" prefWidth="97.0" text="Title ">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="DVDTitle" prefHeight="36.0" prefWidth="503.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="36.0" prefWidth="600.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="43.0" prefWidth="97.0" text="Category">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="DVDCategory" prefHeight="36.0" prefWidth="503.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="36.0" prefWidth="600.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="43.0" prefWidth="97.0" text="Length">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="DVDLength" prefHeight="36.0" prefWidth="503.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="36.0" prefWidth="600.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="43.0" prefWidth="97.0" text="Director">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="DVDDirector" prefHeight="36.0" prefWidth="503.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="36.0" prefWidth="600.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="43.0" prefWidth="97.0" text="Cost">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="DVDCost" prefHeight="36.0" prefWidth="503.0" />
+               </children>
+            </HBox>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="71.0" prefWidth="207.0">
+               <children>
+                  <Button fx:id="DVDAddButton" mnemonicParsing="false" onAction="#DVDButtonPressed" prefHeight="47.0" prefWidth="173.0" text="Add DVD to store">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

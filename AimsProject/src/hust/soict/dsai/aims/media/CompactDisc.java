@@ -1,8 +1,11 @@
 package src.hust.soict.dsai.aims.media;
 
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
-public class CompactDisc extends Media implements Playable{
+import src.hust.soict.dsai.aims.exception.PlayerException;
+public class CompactDisc extends Disc implements Playable{
     private String artist;
     private ArrayList<Track> tracks = new ArrayList<Track>();
     
@@ -21,6 +24,12 @@ public class CompactDisc extends Media implements Playable{
         this.tracks = tracks;
     }
     
+    public CompactDisc(int id,String title,String category, float cost,String artist,String director,ArrayList<Track> tracks){
+        super(id, title, category, director, 0, cost);
+        this.artist=artist;
+        this.tracks=tracks;       
+        getLength();
+    }
     public void addTrack(Track track) {
         if (tracks.contains(track)) {
             System.out.println("This track has already been in the list.");
@@ -46,11 +55,21 @@ public class CompactDisc extends Media implements Playable{
     }
 
     @Override
-    public void play() {
-        System.out.println("CD info:");
-        for (int i=0; i<tracks.size(); i++) {
-            System.out.println((i+1) + ". " + tracks.get(i).toString());
-        }
+    public void play() throws PlayerException {
+    	
+        if (this.getLength()>0) {
+        	java.util.Iterator iter=tracks.iterator();
+        	Track nextTrack;
+        	while (iter.hasNext()) {
+        		nextTrack=(Track) iter.next();
+        		try {
+        			nextTrack.play();
+        		}catch (PlayerException e) {
+					// TODO: handle exception
+        			throw e;
+				}
+        	}
+        } else throw new PlayerException("ERROR: CD length is non-positive");
     }
 
     public String toString() {
