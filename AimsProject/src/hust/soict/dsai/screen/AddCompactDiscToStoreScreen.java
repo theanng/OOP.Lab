@@ -28,7 +28,7 @@ public class AddCompactDiscToStoreScreen extends JFrame {
 
         Platform.runLater(() -> {
             try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/src/hust/soict/dsai/aims/screen/AddCompactDiscToStoreScreen.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/src/hust/soict/dsai/screen/AddCompactDiscToStoreScreen.fxml"));
                 AddCompactDiscToStoreScreenController controller = new AddCompactDiscToStoreScreenController(storeScreen,store);
                 loader.setController(controller);
                 Parent root = loader.load();

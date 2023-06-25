@@ -35,8 +35,8 @@ public class CartScreen extends JFrame {
 			public void run() {
 				// TODO Auto-generated method stub
 				try {
-					FXMLLoader loader=new FXMLLoader(getClass().getResource("/src/hust/soict/dsai/aims/screen/cart.fxml"));
-					CartScreenController controller=new CartScreenController(cart,storeScreen);
+					FXMLLoader loader=new FXMLLoader(getClass().getResource("/src/hust/soict/dsai/screen/cart.fxml"));
+					CartScreenController controller=new CartScreenController(cart,storeScreen); 
 					loader.setController(controller);
 					Parent root=loader.load();
 					fxPanel.setScene(new Scene(root));

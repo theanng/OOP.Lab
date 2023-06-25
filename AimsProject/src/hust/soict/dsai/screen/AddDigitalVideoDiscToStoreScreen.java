@@ -28,7 +28,7 @@ public class AddDigitalVideoDiscToStoreScreen extends JFrame {
 
         Platform.runLater(() -> {
             try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("src/hust/soict/dsai/aims/screen/AddDigitalVideoDiscToStoreScreen.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("src/hust/soict/dsai/screen/AddDigitalVideoDiscToStoreScreen.fxml"));
                 AddDigitalVideoDiscToStoreScreenController controller = new AddDigitalVideoDiscToStoreScreenController(storeScreen,store);
                 loader.setController(controller);
                 Parent root = loader.load();
